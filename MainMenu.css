@@ -1,0 +1,104 @@
+html {
+    width: 100%;
+    height: 100%;
+    background-image: url('./Assets/Overall UI/Generic Felt Mat.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Title {
+    color: white;
+}
+
+.TitleContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ButtonContainer {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.ChipContainer {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    min-height: 300px;
+    padding-bottom: 30px;
+}
+
+#GolbalChips {
+    position: sticky;
+    left: 90%;
+}
+
+#Bank {
+    position: sticky;
+    left: 86%;
+}
+
+.FirstRow {
+    position: sticky;
+    top: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.SecondRow {
+    position: sticky;
+    top: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Roulette {
+    width: 355px;
+    height: 200px;
+    background-image: url('./Assets/Overall UI/Roulette\ Icon.png');
+    background-size: cover;
+    border:none;
+}
+
+#Blackjack {
+    width: 350px;
+    height: 200px;
+    background-image: url('./Assets/Overall UI/Blackjack Icon.png');
+    background-size: cover;
+}
+
+#FiveCardPoker {
+    width: 360px;
+    height: 220px;
+    background-image: url('./Assets/Overall UI/Poker Icon.png');
+    background-size: cover;
+}
+
+#Craps {
+    width: 350px;
+    height: 200px;
+    background-image: url('./Assets/Overall UI/Craps\ Icon.png');
+    background-size: cover;
+}
+
+#Slots {
+    width: 355px;
+    height: 220px;
+    background-image: url('./Assets/Overall UI/Slot\ Machine\ Icon.png');
+    background-size: cover;
+}
+
+.Chips {
+    color: white;
+    font-size: 2rem;
+}
+
+.Button {
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    background-image: url('./Assets/Overall UI/ButtonUp.png');
+    background-size: cover;
+    font-size: 2rem;
+}
