@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bank.css" />
+    <title>Casion Sim - Bank</title>
+</head>
+<body>
+    <p>WELCOME TO THE BANK</p>
+    <div id="chipContainer" class="controlContainer">
+        <div class="numHeader">
+            <p>CASINO&ThickSpace;CHIPS:&ThickSpace;</p>
+            <p id="chipAmount">$4,000</p>
+        </div>
+        <input type="number" id="chipTransferAmount" placeholder="-"/>
+        <div id="btnTransferChips" class="transferButton">DEPOSIT</div>
+    </div>
+    <img src="./Assets/Overall UI/ArrowDown.png" id="transferDirectionImg">
+    <div id="cashContainer" class="controlContainer">
+        <div class="numHeader">
+            <p>BANK&ThickSpace;ACCOUNT:&ThickSpace;</p>
+            <p id="bankAmount">-$15,000</p>
+        </div>
+        <input type="number" id="bankTransferAmount" placeholder="-"/>
+        <div id="btnTransferBank" class="transferButton">WITHDRAW</div>
+    </div>
+    <div id="bottomButtonsContainer">
+        <div id="btnBack"><p>Back</p></div>
+    </div>
+    
+</body>
+</html>
