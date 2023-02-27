@@ -15,20 +15,20 @@
             <p id="chipAmount">$4,000</p>
         </div>
         <input type="number" id="chipTransferAmount" placeholder="-"/>
-        <div id="btnTransferChips" class="transferButton">DEPOSIT</div>
+        <div id="btnTransferChips" class="transferButton disabled">DEPOSIT</div>
     </div>
-    <img src="./Assets/Overall UI/ArrowDown.png" id="transferDirectionImg">
+    <img src="./Assets/Overall UI/ArrowDown.png" id="imgTransferDirection">
     <div id="cashContainer" class="controlContainer">
         <div class="numHeader">
             <p>BANK&ThickSpace;ACCOUNT:&ThickSpace;</p>
             <p id="bankAmount">-$15,000</p>
         </div>
         <input type="number" id="bankTransferAmount" placeholder="-"/>
-        <div id="btnTransferBank" class="transferButton">WITHDRAW</div>
+        <div id="btnTransferBank" class="transferButton disabled">WITHDRAW</div>
     </div>
     <div id="bottomButtonsContainer">
         <div id="btnBack"><p>Back</p></div>
     </div>
-    
+    <script src="./js/bank.js"></script>
 </body>
 </html>

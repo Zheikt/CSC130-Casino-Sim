@@ -114,6 +114,11 @@ body > p{
     margin-left: 50%;
 }
 
+.disabled{
+    cursor: default;
+    opacity: .5;
+}
+
 
 @font-face {
     font-family: "ChunkFive Ex";
