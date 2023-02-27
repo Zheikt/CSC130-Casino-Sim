@@ -1,0 +1,54 @@
+html{
+    background-image: url('../Assets/Overall UI/Generic Felt Mat.jpeg');
+    background-size: contain;
+    height: 100%;
+    color: white;
+    font-size: 35pt;
+    font-family: 'Impact', sans-serif; /*This is the font for text like the Chip Amount and some of the titles*/
+}
+
+.btnPrimary{
+    background-image: url('../Assets/Overall UI/ButtonUp.png');
+    color: #0e0e0e;
+    font-family: 'ChunkFive Ex', sans-serif;
+    background-size: contain;
+    text-align: center;
+    user-select: none;
+    background-repeat: no-repeat;
+}
+
+.btnPrimary:hover{
+    cursor: pointer;
+    background-image: url("../Assets/Overall UI/ButtonDown.png");
+}
+
+.small{
+    min-width: 80px;
+    max-width: 80px;
+    max-height: 25px;
+    font-size: 18px;
+}
+
+.medium{
+    height: 60px;
+    min-width: 230px;
+    max-width: 230px;
+    font-size: 37pt;
+}
+
+#imgGameIcon{
+    width: 200px;
+    height: 113px;
+}
+
+.btnBasicChip{
+    max-width: 85px;
+    max-height: 85px;
+}
+
+@font-face {
+    font-family: "ChunkFive Ex";
+    src: url("../Assets/Chunkfive Ex.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
