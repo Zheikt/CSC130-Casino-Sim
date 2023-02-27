@@ -7,12 +7,6 @@ html
     background-repeat: no-repeat;
 }
 
-#board
-{
-    width: 70%;
-    height: 70%;
-}
-
 #btnContainer
 {
     position: absolute;
@@ -33,14 +27,6 @@ html
     margin-top: 0%;
     bottom: 10px;
     left: 50px;
-}
-
-#board
-{
-    background-size: 70%;
-    user-select: none;
-    margin-left: 15%;
-    margin-top: 3%;
 }
 
 #btnChip_1
@@ -83,7 +69,7 @@ html
     background-image: url("./Assets/Overall UI/Chip5000.png");
 }
 
-#btnDeal
+#btnSpin
 {
     position: absolute;
     font-size: 275%;
@@ -95,11 +81,11 @@ html
     right: 50px;
 }
 
-#blackjackImg
+#slotsImg
 {
     position: absolute;
-    width: 185px;
-    height: 100px;
+    width: 200px;
+    height: 120px;
     left: 20px;
     top: 20px;
 }
@@ -107,27 +93,10 @@ html
 #rulesBtn
 {
     position: absolute;
-    padding: 4% 2% 4% 2%;
+    padding: 4.5% 2.5% 4.5% 2.5%;
     left: 75px;
-    top: 40px;
-}
-
-#deckImg
-{
-    position: absolute;
-    right: 330px;
-    top: 75px;
-    width: 80px;
-    height: 125px;
-}
-
-.selectionImage
-{
-    
-    background-image: url("./Assets/Overall UI/ArrowDown.png");
-    width: 37px;
-    height: 47px;
-    background-repeat: no-repeat;
+    top: 50px;
+    font-size: larger;
 }
 
 .chip
@@ -150,64 +119,17 @@ html
     user-select: none;
 }
 
+#slotMachineBarrel
+{
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
 .btn:hover
 {
     background-image: url("./Assets/Overall UI/ButtonDown.png");
 }
-
-.selectionImg
-{
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 30px;
-    height: 50px;
-}
-
-.chip:hover
-{
-    cursor: pointer;
-}
-
-#selectionForChip_1
-{
-    left: 287px;
-}
-
-#selectionForChip_5
-{
-    left: 437px;
-}
-
-#selectionForChip_10
-{
-    left: 587px;
-}
-
-#selectionForChip_20
-{
-    left: 737px;
-}
-
-#selectionForChip_50
-{
-    left: 884px;
-}
-
-#selectionForChip_100
-{
-    left: 1034px;
-}
-
-#selectionForChip_1k
-{
-    left: 1184px;
-}
-
-#selectionForChip_5k
-{
-    left: 1334px;
-} 
 
 .visible
 {
@@ -218,6 +140,7 @@ html
 {
     visibility: hidden;
 }
+
 
 #moneyAmt
 {
@@ -238,6 +161,95 @@ html
     right: 50px;
     bottom: 150px;
 }
+
+#payoutContainer
+{
+    position: absolute;
+    width: 250px;
+    height: 625px;
+    background-color:rgb(17, 89, 17);
+    border-radius: 10px;
+    top: 180px;
+    left: 20px;
+    border: 2px solid rgb(28, 151, 28);
+}
+
+#barContainer
+{
+    position: absolute;
+    top: 65px;
+}
+
+#bellContainer
+{
+    position: absolute;
+    top: 130px;
+}
+
+#cherryContainer
+{
+    position: absolute;
+    top: 200px;
+}
+
+#plumContainer
+{
+    position: absolute;
+    top: 270px;
+}
+
+#melonContainer
+{
+    position: absolute;
+    top: 330px;
+}
+
+#bananaContainer
+{
+    position: absolute;
+    top: 400px;
+}
+
+#orangeContainer
+{
+    position: absolute;
+    top: 470px;
+}
+
+#lemonContainer
+{
+    position: absolute;
+    top: 530px;
+}
+
+.payoutImg
+{
+    width: 80px;
+    height: 100px;
+
+}
+
+.payoutText
+{
+    position: absolute;
+    font-family: "ChunkFive Ex";
+    color: white;
+    font-size: 300%;
+    width: 170px;
+    top: 28px;
+}
+
+#betLbl
+{
+    position: absolute;
+    color: white;
+    font-size: 375%;
+    left: 45%;
+    top: 100px;
+    font-weight: 800;
+}
+
+
 @font-face {
     font-family: "ChunkFive Ex";
     src: url("./Assets/Chunkfive Ex.ttf");
