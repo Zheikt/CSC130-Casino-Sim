@@ -41,10 +41,11 @@ body > p{
     grid-column: 3/4;
 }
 
-#transferDirectionImg{
+#imgTransferDirection{
     grid-row: 2/3;
     grid-column: 2/3;
-    padding: 0px 30px;
+    margin-top: 30px;
+    justify-self: center;
 }
 
 #bottomButtonsContainer{
