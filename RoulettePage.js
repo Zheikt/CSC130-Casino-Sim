@@ -27,7 +27,34 @@ function Exit() {
 
 function PlaceBid(clickedid) {
     var id = clickedid + "";
-
+    var clickedDiv = document.getElementById(id);
+    if (arrowOne.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted green";
+    }
+    else if (arrowTwo.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted pink";
+    }
+    else if (arrowThree.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted blue";
+    }
+    else if (arrowFour.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted darkred";
+    }
+    else if (arrowFive.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted lightblue";
+    }
+    else if (arrowSix.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted red";
+    }
+    else if (arrowSeven.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted yellow";
+    }
+    else if (arrowEight.style.visibility == "visible") {
+        clickedDiv.style.border = "5px dotted orange";
+    }
+    else {
+        clickedDiv.style.border = "";
+    }
 }
 
 function Spin() {
