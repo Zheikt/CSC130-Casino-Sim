@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/craps.css" />
+    <title>Casino Sim - Craps</title>
+</head>
+
+<body>
+    <div class="iconContainer">
+        <img src="./Assets/Overall UI/Craps Icon.png" id="imgGameIcon" />
+        <div class="btnPrimary small" id="btnRules">RULES</div>
+    </div>
+    <div class="boardContainer">
+        <!--Use the board as a background image-->
+        <!--Add the bets as img tag children nodes-->
+        <div id="pointIndicator">
+            
+            <div class="btnTransparent point" id="btnPoint4"><img src="./Assets/Craps/CrapsOffIndicator.png" id="imgCrapsIndicator"/></div> 
+            <div class="btnTransparent point" id="btnPoint5"></div> 
+            <div class="btnTransparent point" id="btnPoint6"></div> 
+            <div class="btnTransparent point" id="btnPoint8"></div> 
+            <div class="btnTransparent point" id="btnPoint9"></div> 
+            <div class="btnTransparent point" id="btnPoint10"></div> 
+        </div>
+
+        <div id="hardWays">
+            <div class="btnTransparent hardWay" id="btnDbl2"></div>
+            <div class="btnTransparent hardWay" id="btnDbl5"></div>
+            <div class="btnTransparent hardWay" id="btnDbl3"></div>
+            <div class="btnTransparent hardWay" id="btnDbl4"></div>
+        </div>
+
+        <div id="fieldContainer">
+            <div id="dieField">
+                <img src="./Assets/Craps/Dice1.png" id="imgLeftDie"/>
+                <img src="./Assets/Craps/Dice1.png" id="imgRightDie"/>
+            </div>
+            <div id="field">
+                <div class="btnTransparent btnField" id="btnField2"></div>
+                <div class="btnTransparent btnField" id="btnField3"></div>
+                <div class="btnTransparent btnField" id="btnField4"></div>
+                <div class="btnTransparent btnField" id="btnField9"></div>
+                <div class="btnTransparent btnField" id="btnField10"></div>
+                <div class="btnTransparent btnField" id="btnField11"></div>
+                <div class="btnTransparent btnField" id="btnField12"></div>
+            </div>
+            <div class="btnTransparent" id="btnDontPass"></div>
+            <div class="btnTransparent" id="btnPass"></div>
+        </div>
+        <div id="oneRollBets">
+            <div class="btnTransparent" id="btnOneRollSeven"></div>
+            <div class="btnTransparent" id="btnOneRollThree"></div>
+            <div class="btnTransparent" id="btnOneRollEleven"></div>
+            <div class="btnTransparent" id="btnOneRollTwo"></div>
+            <div class="btnTransparent" id="btnOneRollTwelve"></div>
+            <div class="btnTransparent" id="btnOneRollCraps"></div>
+        </div>
+    </div>
+    <div id="chipsContainer">
+        <p id="lblChipTitle">CHIPS:</p>
+        <p id="lblChipAmount">$4,000</p>
+    </div>
+    <img src="./Assets/Overall UI/ArrowDown.png" id="imgTokenSelector" />
+    <div id="bottomButtonsContainer">
+        <div class="btnPrimary medium" id="btnBack">BACK</div>
+        <img src="./Assets/Overall UI/Chip1.png" id="imgChip1"  class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip5.png" id="imgChip5" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip10.png" id="imgChip10" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip20.png" id="imgChip20" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip50.png" id="imgChip50" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip100.png" id="imgChip100" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip500.png" id="imgChip500" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip1000.png" id="imgChip1000" class="btnBasicChip"/>
+        <img src="./Assets/Overall UI/Chip5000.png" id="imgChip5000" class="btnBasicChip"/>
+        <div class="btnPrimary medium" id="btnRoll">ROLL</div>
+    </div>
+</body>
+
+</html>

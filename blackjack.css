@@ -1,0 +1,246 @@
+html
+{
+    background-image: url("./Assets/Overall UI/Generic Felt Mat.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#board
+{
+    width: 70%;
+    height: 70%;
+}
+
+#btnContainer
+{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    padding-right: 80%;
+    bottom: 10px;
+    left: 200px
+}
+
+#btnBack
+{
+    position: absolute;
+    font-size: 275%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1.3% 2% 1.3% 2%;
+    margin-top: 0%;
+    bottom: 10px;
+    left: 50px;
+}
+
+#board
+{
+    background-size: 70%;
+    user-select: none;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+#btnChip_1
+{
+    background-image: url("./Assets/Overall UI/Chip1.png");
+}
+
+#btnChip_5
+{
+    background-image: url("./Assets/Overall UI/Chip5.png");
+}
+
+#btnChip_10
+{
+    background-image: url("./Assets/Overall UI/Chip10.png");
+}
+
+#btnChip_20
+{
+    background-image: url("./Assets/Overall UI/Chip20.png");
+}
+
+#btnChip_50
+{
+    background-image: url("./Assets/Overall UI/Chip50.png");
+}
+
+#btnChip_100
+{
+    background-image: url("./Assets/Overall UI/Chip100.png");
+}
+
+#btnChip_1k
+{
+    background-image: url("./Assets/Overall UI/Chip1000.png");
+}
+
+#btnChip_5k
+{
+    background-image: url("./Assets/Overall UI/Chip5000.png");
+}
+
+#btnDeal
+{
+    position: absolute;
+    font-size: 275%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1.3% 2.4% 1.3% 2.4%;
+    margin-top: 0%;
+    bottom: 10px;
+    right: 50px;
+}
+
+#blackjackImg
+{
+    position: absolute;
+    width: 185px;
+    height: 100px;
+    left: 20px;
+    top: 20px;
+}
+
+#rulesBtn
+{
+    position: absolute;
+    padding: 4% 2% 4% 2%;
+    left: 75px;
+    top: 40px;
+}
+
+#deckImg
+{
+    position: absolute;
+    right: 330px;
+    top: 75px;
+    width: 80px;
+    height: 125px;
+}
+
+.selectionImage
+{
+    
+    background-image: url("./Assets/Overall UI/ArrowDown.png");
+    width: 37px;
+    height: 47px;
+    background-repeat: no-repeat;
+}
+
+.chip
+{
+    background-size: cover;
+    height: 85px;
+    width: 85px;
+    border-radius: 50px;
+    margin-left: 60px;
+}
+
+.btn
+{
+    background-image: url("./Assets/Overall UI/ButtonUp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-family: 'ChunkFive Ex';
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover
+{
+    background-image: url("./Assets/Overall UI/ButtonDown.png");
+}
+
+.selectionImg
+{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 50px;
+}
+
+.chip:hover
+{
+    cursor: pointer;
+}
+
+#selectionForChip_1
+{
+    left: 287px;
+}
+
+#selectionForChip_5
+{
+    left: 437px;
+}
+
+#selectionForChip_10
+{
+    left: 587px;
+}
+
+#selectionForChip_20
+{
+    left: 737px;
+}
+
+#selectionForChip_50
+{
+    left: 884px;
+}
+
+#selectionForChip_100
+{
+    left: 1034px;
+}
+
+#selectionForChip_1k
+{
+    left: 1184px;
+}
+
+#selectionForChip_5k
+{
+    left: 1334px;
+} 
+
+.visible
+{
+    visibility: visible;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+#moneyAmt
+{
+    position: absolute;
+    font-family: 'ChunkFive Ex';
+    color: white;
+    font-size: 200%;
+    right: 50px;
+    bottom: 100px;
+}
+
+#moneyAmtlbl
+{
+    position: absolute;
+    font-family: 'ChunkFive Ex';
+    color: white;
+    font-size: 200%;
+    right: 50px;
+    bottom: 150px;
+}
+@font-face {
+    font-family: "ChunkFive Ex";
+    src: url("./Assets/Chunkfive Ex.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
