@@ -27,6 +27,12 @@ html
 #btnContainer
 {
     margin-top: 10%;
+    width: 100%;
+    height: auto;
+    padding-right: 80%;
+    bottom: 10%;
+    left: 10%
+
 }
 
 #pokerIcon
@@ -61,6 +67,55 @@ html
     font-size: 250%;
     padding: 1% 2.5% 1% 2.5%;
     margin-left: 63%;
+}
+
+.chip
+{
+    background-size: cover;
+    height: 85px;
+    width: 85px;
+    border-radius: 50px;
+    margin-left: 60px;
+}
+
+#btnChip_1
+{
+    background-image: url("./Assets/Overall UI/Chip1.png");
+}
+
+#btnChip_5
+{
+    background-image: url("./Assets/Overall UI/Chip5.png");
+}
+
+#btnChip_10
+{
+    background-image: url("./Assets/Overall UI/Chip10.png");
+}
+
+#btnChip_20
+{
+    background-image: url("./Assets/Overall UI/Chip20.png");
+}
+
+#btnChip_50
+{
+    background-image: url("./Assets/Overall UI/Chip50.png");
+}
+
+#btnChip_100
+{
+    background-image: url("./Assets/Overall UI/Chip100.png");
+}
+
+#btnChip_1k
+{
+    background-image: url("./Assets/Overall UI/Chip1000.png");
+}
+
+#btnChip_5k
+{
+    background-image: url("./Assets/Overall UI/Chip5000.png");
 }
 
 
