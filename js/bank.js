@@ -13,8 +13,6 @@ let playerChipsLS = localStorage.getItem("chipsBalance");
 playerBankLS = playerBankLS === null ? 10000 : parseInt(playerBankLS);
 playerChipsLS = playerChipsLS === null ? 0 : parseInt(playerChipsLS);
 
-imgTransferDirection.style.visibility = 'hidden';
-
 updateLabels();
 
 btnBack.onclick = (ev) => {
@@ -50,13 +48,13 @@ btnWithdraw.onclick = (ev) => {
 txtChipTransfer.oninput = (ev) => {
     enableTransferButton(txtChipTransfer, btnDeposit);
     imgTransferDirection.style.transform = 'rotate(-90deg)';
-    imgTransferDirection.style.visibility = 'visible';
+    imgTransferDirection.style.visibility = txtChipTransfer.value.length > 0 ? 'visible' : 'hidden';
 }
 
 txtBankTransfer.oninput = (ev) => {
     enableTransferButton(txtBankTransfer, btnWithdraw);
     imgTransferDirection.style.transform = 'rotate(90deg)';
-    imgTransferDirection.style.visibility = 'visible';
+    imgTransferDirection.style.visibility = txtBankTransfer.value.length > 0 ? 'visible' : 'hidden';
 }
 
 function enableTransferButton(txtTransfer, btnTransfer){
