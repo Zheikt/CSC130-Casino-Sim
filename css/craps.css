@@ -1,0 +1,210 @@
+body{
+    display: grid;
+    grid-template-columns: 120fr repeat(9, 60fr) 120fr;
+    grid-template-rows: 1fr 1.75fr 0.25fr 0.4fr;
+}
+
+#btnRules{
+    align-self: flex-end;
+}
+
+.boardContainer{
+    background-image: url('../Assets/Craps/CrapsBoard.png');
+    width: 1095px;
+    height: 680.5px;
+    background-size: contain;
+    grid-row: 1/3;
+    grid-column:2/12;
+    display: grid;
+    grid-template-columns: 3fr 1.23fr;
+    grid-template-rows: 1.4fr 1.5fr 1fr 1.05fr;
+}
+
+.btnTransparent:hover{
+    border: 5px solid yellow;
+    cursor: pointer;
+}
+
+.iconContainer{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#chipsContainer{
+    grid-row: 3/4;
+    grid-column: 11/12;
+}
+
+#chipsContainer p{
+    margin: 0.25em;
+}
+
+#imgCrapsIndicator{
+    max-width: 85px;
+    max-height: 85px;
+}
+
+#bottomButtonsContainer{
+    grid-row: 4/5;
+    grid-column: 1/13;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#imgTokenSelector{
+    grid-row: 3/4;
+    grid-column: 2/11;
+    justify-self: center;
+    align-self: flex-end; /*Use an array for the chips and key off the index to change the grid-column-start and grid-column-end (js)*/
+}
+
+#pointIndicator{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) 0.121fr;
+    grid-template-rows: 1fr;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#hardWays{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1fr 1fr 0.33fr;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+#btnDbl2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+#btnDbl5{
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+#btnDbl3{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+#btnDbl4{
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+
+#oneRollBets{
+    grid-row: 2/4;
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 0.09fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.67fr 1.4fr 1.2fr 1.2fr 1.3fr
+}
+
+#btnOneRollSeven{
+    grid-row: 3/4;
+    grid-column: 2/4;
+}
+
+#btnOneRollThree{
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+
+#btnOneRollEleven{
+    grid-row: 4/5;
+    grid-column: 3/4;
+}
+
+#btnOneRollTwo{
+    grid-row: 5/6;
+    grid-column: 2/3;
+}
+
+#btnOneRollTwelve{
+    grid-row: 5/6;
+    grid-column: 3/4;
+}
+
+#btnOneRollCraps{
+    grid-row: 6/7;
+    grid-column: 2/4;
+}
+
+#fieldContainer{
+    display: grid;
+    grid-template-columns: 1fr 0.02fr;
+    grid-template-rows: 0.05fr 1.1fr 0.85fr 0.35fr 0.43fr;
+    grid-row: 2/5;
+    grid-column: 1/2;
+}
+
+#dieField{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgLeftDie, #imgRightDie{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    visibility: hidden;
+}
+
+#btnDontPass{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#btnPass{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#field{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1.65fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: 1.6fr 1fr;
+}
+
+#btnField2{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+#btnField3{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+#btnField4{
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+#btnField9{
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+
+#btnField10{
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+
+#btnField11{
+    grid-row: 1/2;
+    grid-column: 6/7;
+}
+
+#btnField12{
+    grid-row: 1/3;
+    grid-column: 7/8;
+}

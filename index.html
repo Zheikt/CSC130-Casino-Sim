@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino Sim</title>
     <link rel="stylesheet" href="home.css">
+    
 </head>
 <body>
     <img id="Casino" src="./Assets/Overall UI/Casino Icon.png"/>
-    <div id="playBtn" class="playBtnText btn">
+    <div onclick="window.location.href = './MainMenu.html'" id="playBtn" class="playBtnText btn">
         PLAY
     </div>
     <div id="btnContainer">
-        <span id="exitBtn" class="btn">EXIT</span>
+        <span id="exitBtn" onclick="exit();" class="btn">EXIT</span><!--TODO: Fix loction to default home page-->
         <span id="moreBtn" class="btn">MORE...</span>
     </div>
+    <script language="javascript">
+        function exit()
+        {
+            window.open("", "_self");
+        }   
+    </script>
 </body>
+
 </html>

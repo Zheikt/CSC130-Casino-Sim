@@ -1,0 +1,228 @@
+html {
+    background-image: url("./Assets/Overall UI/Generic Felt Mat.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.rouletteIcon {
+    background-image: url("./Assets/Overall UI/");
+    height: 100px;
+    width: 150px;
+    z-index: 1;
+}
+
+#btnRouletteRules {
+    border: none;
+    position: sticky;
+    padding: 0% 2.25% 0% 2.25%;
+    margin-right: 89%;
+    top: 5%;
+    z-index: 2;
+}
+
+.rulesButton {
+    background-image: url("./Assets/Overall UI/ButtonUp.png");
+    background-size: Cover;
+    background-position: center;
+    border-radius: 2px;
+    font-family: 'ChunkFive Ex';
+}
+
+.rulesButton:hover {
+    background-image: url("./Assets/Overall UI/ButtonDown.png");
+}
+
+.ResultArea {
+    position: sticky;
+    font-size: 200%;
+    left: 5%;
+    color: white;
+    font-family: 'ChunkFive Ex';
+}
+
+.divResult {
+    background-color: purple;
+    height: 40px;
+    width: 60px;
+    position: sticky;
+    left: 25%;
+    top: 20%;
+    border-radius: 45%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.assetContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.clickableDiv:hover {
+    border: 5px solid yellow;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 2.6fr repeat(12, 1.85fr) 2fr; /*repeat(amount, whatToRepeat) repeat(14, 1.6fr)*/
+    grid-template-rows: repeat(3, 2.15fr) repeat(2, 1.6fr);
+}
+
+.board {
+    height: 480px;
+    width: 1100px;
+    grid-column: 2/3;
+    position: sticky;
+    background-image: url("./Assets/Roulette/Roulette_SingleZero.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    align-content: center;
+}
+
+.rouletteWheel {
+    grid-column: 1/2;
+    height: 300px;
+    width: 300px;
+    position: sticky;
+    top: 100%;
+    left: 2%;
+    background-image: url("./Assets/Roulette/RouletteWheel_SingleZero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chipContainer {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+#pGolbalChips {
+    position: sticky;
+    left: 88.5%;
+    color: white;
+    font-size: 2rem;
+}
+
+.chips{
+    position: relative;
+    text-align: center;
+}
+
+.token {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-left: 25%;
+    border: none;
+    border-radius: 50%;
+}
+
+.arrows {
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 43%;
+    height: 50px;
+    width: 35px;
+    visibility: hidden;
+}
+
+#btnOneToken {
+    background-image: url("./Assets/Overall UI/Chip1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnFiveToken {
+    background-image: url("./Assets/Overall UI/Chip5.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnTenToken {
+    background-image: url("./Assets/Overall UI/Chip10.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnTwentyToken {
+    background-image: url("./Assets/Overall UI/Chip20.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnFiftyToken {
+    background-image: url("./Assets/Overall UI/Chip50.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnOneHundredToken {
+    background-image: url("./Assets/Overall UI/Chip100.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnOneThousandToken {
+    background-image: url("./Assets/Overall UI/Chip1000.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#btnFiveThousandToken {
+    background-image: url("./Assets/Overall UI/Chip5000.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.buttonContainer {
+    position: sticky;
+    bottom: 3%;
+}
+
+.btn
+{
+    background-image: url("./Assets/Overall UI/ButtonUp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-family: 'ChunkFive Ex';
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-image: url("./Assets/Overall UI/ButtonDown.png");
+}
+
+#btnExit {
+    border: none;
+    position: sticky;
+    bottom: 5%;
+    font-size: 250%;
+    padding: 0% 3% 0% 3%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+#btnSpin {
+    border: none;
+    position: sticky;
+    left: 86%;
+    bottom: 5%;
+    font-size: 250%;
+    padding: 3% 4% 3% 4%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "ChunkFive Ex";
+    src: url("./Assets/Chunkfive Ex.ttf");
+    font-weight: normal;
+    font-style: normal;
+}

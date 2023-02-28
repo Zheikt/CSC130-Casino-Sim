@@ -3,7 +3,7 @@ html {
     height: 100%;
     background-image: url('./Assets/Overall UI/Generic Felt Mat.jpeg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .Title {
@@ -13,30 +13,6 @@ html {
 .TitleContainer {
     display: flex;
     justify-content: center;
-}
-
-.ButtonContainer {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-}
-
-.ChipContainer {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    min-height: 300px;
-    padding-bottom: 30px;
-}
-
-#GolbalChips {
-    position: sticky;
-    left: 90%;
-}
-
-#Bank {
-    position: sticky;
-    left: 86%;
 }
 
 .FirstRow {
@@ -89,16 +65,53 @@ html {
     background-size: cover;
 }
 
-.Chips {
+.ChipContainer {
+    position: sticky;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#GolbalChips {
+    position: sticky;
+    left: 88.5%;
     color: white;
     font-size: 2rem;
 }
 
+.ButtonContainer {
+    margin-top: 10%;
+}
+
 .Button {
-    width: 200px;
-    height: 50px;
+    background-image: url("./Assets/Overall UI/ButtonUp.png");
+    background-position: center;
     border-radius: 8px;
-    background-image: url('./Assets/Overall UI/ButtonUp.png');
-    background-size: cover;
-    font-size: 2rem;
+    font-family: 'ChunkFive Ex';
+}
+
+.Button:hover {
+    background-image: url("./Assets/Overall UI/ButtonDown.png");
+}
+
+#Exit {
+    border: none;
+    font-size: 250%;
+    padding: 0% 3% 0% 3%;
+    margin-left: 4%;
+}
+
+#Bank {
+    border: none;
+    font-size: 250%;
+    padding: 0% 2.25% 0% 2.25%;
+    margin-left: 20%;
+    position: sticky;
+    left: 86%;
+}
+
+@font-face {
+    font-family: "ChunkFive Ex";
+    src: url("./Assets/Chunkfive Ex.ttf");
+    font-weight: normal;
+    font-style: normal;
 }
