@@ -4,22 +4,6 @@ body{
     grid-template-rows: 1fr 1.75fr 0.25fr 0.4fr;
 }
 
-#mdlRules{
-    display: none;
-    width: 90%;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    grid-row: 1/5;
-    grid-column: 1/12;
-    width: 100%;
-    height: 100%;
-}
-
-#mdlRules > ul > li{
-    font-size: 18pt;
-}
-
 #lstPayouts{
     display: flex;
     justify-content: space-around;
@@ -54,10 +38,6 @@ body{
 .btnTransparent:hover{
     border: 5px solid yellow;
     cursor: pointer;
-}
-
-.cntTransparent{
-    
 }
 
 .iconContainer{
