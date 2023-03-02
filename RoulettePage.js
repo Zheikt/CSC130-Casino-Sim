@@ -10,6 +10,7 @@ var resultArea = document.getElementById("divSpinResult");
 var result = document.getElementById("lblResult");
 
 var currentTokenValue = 0;
+var totalPayout = 0;
 
 function getAnswerInt(min, max) {
     min = Math.ceil(min);
@@ -17,8 +18,129 @@ function getAnswerInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function CheckForWin() {
+function CalculateWin(roll, bidAmount) {
+    if (roll <= 36) {
+        // Payout for inviual number
+        totalPayout += bidAmount * 36;
+        console.log("single Number Pay-Out: " + totalPayout);
+    }
+    if (roll >= 1 && roll <= 12) {
+        // Payout for 1st 12
+        totalPayout += bidAmount * 2;
+        console.log("1st 12 Pay-Out: " + totalPayout);
+    }
+    if (roll >= 13 && roll <= 24) {
+        // Payout for 2nd 12
+        totalPayout += bidAmount * 2;
+        console.log("2nd 12 Pay-Out: " + totalPayout);
+    }
+    if (roll >= 25 && roll <= 36) {
+        // Payout for 3rd 12
+        totalPayout += bidAmount * 2;
+        console.log("3rd 12 Pay-Out: " + totalPayout);
+    }
+    if (roll == 1 || roll == 4 || roll == 7 || roll == 10 || roll == 13 || roll == 16 || roll == 19 || roll == 22 || roll == 25 || roll == 28 || roll == 31 || roll == 34) {
+        // Payout for Row 1
+        totalPayout += bidAmount * 2;
+        console.log("Row One Pay-Out: " + totalPayout);
+    }
+    if (roll == 2 || roll == 5 || roll == 8 || roll == 11 || roll == 14 || roll == 17 || roll == 20 || roll == 23 || roll == 26 || roll == 29 || roll == 32 || roll == 35) {
+        // Payout for Row 2
+        totalPayout += bidAmount * 2;
+        console.log("Row Two Pay-Out: " + totalPayout);
+    }
+    if (roll == 3 || roll == 6 || roll == 9 || roll == 12 || roll == 15 || roll == 18 || roll == 11 || roll == 24 || roll == 27 || roll == 30 || roll == 33 || roll == 36) {
+        // Payout for Row 3
+        totalPayout += bidAmount * 2;
+        console.log("Row Three Pay-Out: " + totalPayout);
+    }
+    if (roll >= 1 && roll <= 18) {
+        // Payout for 1 to 18
+        totalPayout += bidAmount;
+        console.log("1 To 18 Pay-Out: " + totalPayout);
+    }
+    if (roll % 2 == 0) {
+        // Payout for Evens
+        totalPayout += bidAmount;
+        console.log("Evens Pay-Out: " + totalPayout);
+    }
+    if (resultArea.style.backgroundColor == "red") {
+        // Payout for Reds
+        totalPayout += bidAmount * 1;
+        console.log("Red Pay-Out: " + totalPayout);
+    }
+    if (resultArea.style.backgroundColor == "black") {
+        // Payout for Blacks
+        totalPayout += bidAmount * 1;
+        console.log("Black Pay-Out: " + totalPayout);
+    }
+    if (roll % 2 != 0) {
+        // Payout for Odds
+        totalPayout += bidAmount;
+        console.log("Odds Pay-Out: " + totalPayout);
+    }
+    if (roll >= 19 && roll <= 36) {
+        // Payout for 19 to 36
+        totalPayout += bidAmount;
+        console.log("19 To 36 Pay-Out: " + totalPayout);
+    }
+    return totalPayout;
+}
 
+function Spin() {
+    resultArea.style.visibility = "visible";
+    totalPayout = 0;
+    var roll = getAnswerInt(0, 36);
+    console.log(roll);
+    result.innerHTML = roll;
+    if (roll == 2 || roll == 4 || roll == 6 || roll == 8 || roll == 10 || roll == 11 || roll == 13 || roll == 15 || roll == 17 || roll == 20 || roll == 22 || roll == 24 || roll == 26 || roll == 28 || roll == 29 || roll == 31 || roll == 33 || roll == 35) {
+        resultArea.style.backgroundColor = "black";
+    }
+    else if (roll == 1 || roll == 3 || roll == 5 || roll == 7 || roll == 9 || roll == 12 || roll == 14 || roll == 16 || roll == 18 || roll == 19 || roll == 21 || roll == 23 || roll == 25 || roll == 27 || roll == 30 || roll == 32 || roll == 34 || roll == 36) {
+        resultArea.style.backgroundColor = "red";
+    }
+    else {
+        resultArea.style.backgroundColor = "green";
+    }
+    CheckForSingleWin(roll);
+}
+
+function CheckForSingleWin(roll) {
+        var biddedDiv = document.getElementById("btn" + roll.toString());
+        switch (biddedDiv.style.border.toString()) {
+            case "5px dotted green" :
+                console.log("Green Bid Won!");
+                CalculateWin(roll, 1);
+                break;
+            case "5px dotted pink" :
+                console.log("Pink Bid Won!");
+                CalculateWin(roll, 5);
+                break;
+            case "5px dotted blue" :
+                console.log("Blue Bid Won!");
+                CalculateWin(roll, 10);
+                break;
+            case "5px dotted darkred" :
+                console.log("Dark Red Bid Won!");
+                CalculateWin(roll, 20);
+                break;
+            case "5px dotted lightblue" :
+                console.log("Light Blue Bid Won!");
+                CalculateWin(roll, 50);
+                break;
+            case "5px dotted red" :
+                console.log("Red Bid Won!");
+                CalculateWin(roll, 100);
+                break;
+            case "5px dotted yellow" :
+                console.log("Yellow Bid Won!");
+                CalculateWin(roll, 1000);
+                break;
+            case "5px dotted orange" :
+                console.log("Orange Bid Won!");
+                CalculateWin(roll, 5000);
+                break;
+        }
 }
 
 function Exit() {
@@ -55,23 +177,6 @@ function PlaceBid(clickedid) {
     else {
         clickedDiv.style.border = "";
     }
-}
-
-function Spin() {
-    resultArea.style.visibility = "visible";
-    var roll = getAnswerInt(0, 36);
-    console.log(roll);
-    result.innerHTML = roll;
-    if (roll == 2 || roll == 4 || roll == 6 || roll == 8 || roll == 10 || roll == 11 || roll == 13 || roll == 15 || roll == 17 || roll == 20 || roll == 22 || roll == 24 || roll == 26 || roll == 28 || roll == 29 || roll == 31 || roll == 33 || roll == 35) {
-        resultArea.style.backgroundColor = "black";
-    }
-    else if (roll == 1 || roll == 3 || roll == 5 || roll == 7 || roll == 9 || roll == 12 || roll == 14 || roll == 16 || roll == 18 || roll == 19 || roll == 21 || roll == 23 || roll == 25 || roll == 27 || roll == 30 || roll == 32 || roll == 34 || roll == 36) {
-        resultArea.style.backgroundColor = "red";
-    }
-    else {
-        resultArea.style.backgroundColor = "green";
-    }
-    CheckForWin();
 }
 
 function Rules() {
