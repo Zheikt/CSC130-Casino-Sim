@@ -20,12 +20,12 @@
         <!--Add the bets as img tag children nodes-->
         <div id="pointIndicator">
             
-            <div class="btnTransparent point" id="btnPoint4"><img src="./Assets/Craps/CrapsOffIndicator.png" id="imgCrapsIndicator"/></div> 
-            <div class="btnTransparent point" id="btnPoint5"></div> 
-            <div class="btnTransparent point" id="btnPoint6"></div> 
-            <div class="btnTransparent point" id="btnPoint8"></div> 
-            <div class="btnTransparent point" id="btnPoint9"></div> 
-            <div class="btnTransparent point" id="btnPoint10"></div> 
+            <div class="point" id="btnPoint4"><img src="./Assets/Craps/CrapsOffIndicator.png" id="imgCrapsIndicator"/></div> 
+            <div class="point" id="btnPoint5"></div> 
+            <div class="point" id="btnPoint6"></div> 
+            <div class="point" id="btnPoint8"></div> 
+            <div class="point" id="btnPoint9"></div> 
+            <div class="point" id="btnPoint10"></div> 
         </div>
 
         <div id="hardWays">
@@ -79,6 +79,26 @@
         <img src="./Assets/Overall UI/Chip5000.png" id="imgChip5000" class="btnBasicChip"/>
         <div class="btnPrimary medium" id="btnRoll">ROLL</div>
     </div>
+    <div class="rulesModal" id="mdlRules">
+        <h1>Rules of Craps</h1>
+        <ul id="lstRules">
+            <li>You must place a bet before the starting roll (when indicator is 'Off')</li>
+            <li>A 'Pass' bet is done at the beginning. If the roller lands a 7 or 11, you win. If they roll a 2, 3, or 12, you lose.</li>
+            <li>If the above condition isn't met, the value of the dice becomes the 'point', marked by the indicator being 'On'. With a pass bet, the roller must land the point again before a 7 is rolled in order to win.</li>
+            <li>A 'Don't Pass' bet is very similar, but opposite. The win conditions are reversed compared to a 'Pass' bet (7 or 11 first roll is a loss; 2 or 3 is a win; 12 is a loss due to this table being 'Don't Pass Bar Double Six'; if it goes to 'point' rolls, a 7 wins and the point loses) </li>
+            <li>A 'Field' bet is done by placing chips on the number you bet will be rolled next. You win if it is rolled, and lose if it isn't.</li>
+            <li>A 'One Roll' bet bets that the next roll will be the number you bet on. Otherwise, its a loss.</li>
+            <li>A 'Hardway' bet bets that the roller will get the selected double before rolling a 7 or the value of the dice without the double (e.g. bet is 3,3 and 4,2 is rolled. Result = loss)</li>
+        </ul>
+        <ul id="lstPayouts">
+            <li>Pass / Don't Pass : 1:1</li>
+            <li>Field: <ul><li>3,4,9,10,11 : 1:1</li><li>2: 2:1</li><li>12: 3:1</li></ul></li>
+            <li>One Roll: <ul><li>Any Craps (2,3,12): 7:1</li><li>2 or 12: 30:1</li><li>3 or 11: 15:1</li></ul></li>
+            <li>Hardway: <ul><li>4 or 10: 7:1</li> <li>6 or 8: 9:1</li></ul></li>
+        </ul>
+        <div id="btnCloseRules" class="btnPrimary medium">Close</div>
+    </div>
+    <script src="./js/craps.js"></script>
 </body>
 
 </html>
