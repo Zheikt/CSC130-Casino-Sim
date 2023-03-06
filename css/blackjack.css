@@ -1,6 +1,6 @@
 html
 {
-    background-image: url("./Assets/Overall UI/Generic Felt Mat.jpeg");
+    background-image: url("../Assets/Overall UI/Generic Felt Mat.jpeg");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -45,42 +45,42 @@ html
 
 #btnChip_1
 {
-    background-image: url("./Assets/Overall UI/Chip1.png");
+    background-image: url("../Assets/Overall UI/Chip1.png");
 }
 
 #btnChip_5
 {
-    background-image: url("./Assets/Overall UI/Chip5.png");
+    background-image: url("../Assets/Overall UI/Chip5.png");
 }
 
 #btnChip_10
 {
-    background-image: url("./Assets/Overall UI/Chip10.png");
+    background-image: url("../Assets/Overall UI/Chip10.png");
 }
 
 #btnChip_20
 {
-    background-image: url("./Assets/Overall UI/Chip20.png");
+    background-image: url("../Assets/Overall UI/Chip20.png");
 }
 
 #btnChip_50
 {
-    background-image: url("./Assets/Overall UI/Chip50.png");
+    background-image: url("../Assets/Overall UI/Chip50.png");
 }
 
 #btnChip_100
 {
-    background-image: url("./Assets/Overall UI/Chip100.png");
+    background-image: url("../Assets/Overall UI/Chip100.png");
 }
 
 #btnChip_1k
 {
-    background-image: url("./Assets/Overall UI/Chip1000.png");
+    background-image: url("../Assets/Overall UI/Chip1000.png");
 }
 
 #btnChip_5k
 {
-    background-image: url("./Assets/Overall UI/Chip5000.png");
+    background-image: url("../Assets/Overall UI/Chip5000.png");
 }
 
 #btnDeal
@@ -123,8 +123,6 @@ html
 
 .selectionImage
 {
-    
-    background-image: url("./Assets/Overall UI/ArrowDown.png");
     width: 37px;
     height: 47px;
     background-repeat: no-repeat;
@@ -141,7 +139,7 @@ html
 
 .btn
 {
-    background-image: url("./Assets/Overall UI/ButtonUp.png");
+    background-image: url("../Assets/Overall UI/ButtonUp.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -152,7 +150,7 @@ html
 
 .btn:hover
 {
-    background-image: url("./Assets/Overall UI/ButtonDown.png");
+    background-image: url("../Assets/Overall UI/ButtonDown.png");
 }
 
 .selectionImg
@@ -240,7 +238,7 @@ html
 }
 @font-face {
     font-family: "ChunkFive Ex";
-    src: url("./Assets/Chunkfive Ex.ttf");
+    src: url("../Assets/Chunkfive Ex.ttf");
     font-weight: normal;
     font-style: normal;
 }
