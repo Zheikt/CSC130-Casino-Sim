@@ -7,6 +7,10 @@ html{
     font-family: 'Impact', sans-serif; /*This is the font for text like the Chip Amount and some of the titles*/
 }
 
+input{
+    font-family: 'Impact', sans-serif;
+}
+
 .btnPrimary{
     background-image: url('../Assets/Overall UI/ButtonUp.png');
     color: #0e0e0e;
@@ -36,6 +40,13 @@ html{
     font-size: 37pt;
 }
 
+.large{
+    height: 100px;
+    min-width: 380px;
+    max-width: 380px;
+    font-size: 40pt;
+}
+
 #imgGameIcon{
     width: 200px;
     height: 113px;
@@ -44,6 +55,11 @@ html{
 .btnBasicChip{
     max-width: 85px;
     max-height: 85px;
+}
+
+.disabled{
+    cursor: default;
+    opacity: .5;
 }
 
 @font-face {

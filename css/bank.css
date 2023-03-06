@@ -41,10 +41,11 @@ body > p{
     grid-column: 3/4;
 }
 
-#transferDirectionImg{
+#imgTransferDirection{
     grid-row: 2/3;
     grid-column: 2/3;
-    padding: 0px 30px;
+    margin-top: 30px;
+    justify-self: center;
 }
 
 #bottomButtonsContainer{
@@ -55,19 +56,15 @@ body > p{
 
 #btnBack{
     display: flex;
-    background-image: url('../Assets/Overall UI/ButtonUp.png');
     background-size: contain;
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 30pt;
     color: black;
-    height: 50px;
-    min-width: 190px;
-    cursor: pointer;
     user-select: none;
     font-family: 'ChunkFive Ex';
     margin: 15px;
+    background-repeat: no-repeat;
 }
 
 .numHeader{
@@ -82,28 +79,22 @@ body > p{
     width: 380px;
 }
 
-#transferDirectionImg{
+#imgTransferDirection{
     rotate: 90deg;
     visibility: hidden;
     justify-self: center;
 }
 
 .transferButton{
-    background-image: url('../Assets/Overall UI/ButtonUp.png');
-    width: calc(190px * 2);
-    height: calc(50px * 2);
-    background-repeat: no-repeat;
-    background-size: contain;
     align-items: center;
     display: flex;
     justify-content: center;
     font-size: 40pt;
     margin: 15px 15px;
     cursor: pointer;
-    user-select: none;
-    font-family: 'ChunkFive Ex';
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
+    color: white;
 }
 
 #cashContainer{
@@ -113,12 +104,6 @@ body > p{
 #chipContainer{
     margin-left: 50%;
 }
-
-.disabled{
-    cursor: default;
-    opacity: .5;
-}
-
 
 @font-face {
     font-family: "ChunkFive Ex";

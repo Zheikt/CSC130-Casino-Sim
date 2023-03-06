@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bank.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/bank.css" />
     <title>Casion Sim - Bank</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
             <p id="chipAmount">$4,000</p>
         </div>
         <input type="number" id="chipTransferAmount" placeholder="-"/>
-        <div id="btnTransferChips" class="transferButton disabled">DEPOSIT</div>
+        <div id="btnTransferChips" class="btnPrimary large transferButton disabled">DEPOSIT</div>
     </div>
     <img src="./Assets/Overall UI/ArrowDown.png" id="imgTransferDirection">
     <div id="cashContainer" class="controlContainer">
@@ -25,10 +25,10 @@
             <p id="bankAmount">-$15,000</p>
         </div>
         <input type="number" id="bankTransferAmount" placeholder="-"/>
-        <div id="btnTransferBank" class="transferButton disabled">WITHDRAW</div>
+        <div id="btnTransferBank" class="btnPrimary large transferButton disabled">WITHDRAW</div>
     </div>
     <div id="bottomButtonsContainer">
-        <div id="btnBack"><p>Back</p></div>
+        <div id="btnBack" class="btnPrimary medium"><p>Back</p></div>
     </div>
     <script src="./js/bank.js"></script>
 </body>
