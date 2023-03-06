@@ -1,0 +1,493 @@
+html
+{
+    background-image: url("../Assets/Overall UI/Generic Felt Mat.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#btnContainer
+{
+    position: absolute;
+    height: fit-content;
+    bottom: 10px;
+    left: 200px
+}
+
+#btnBack
+{
+    position: absolute;
+    font-size: 275%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1.3% 2% 1.3% 2%;
+    margin-top: 0%;
+    bottom: 10px;
+    left: 50px;
+}
+
+#btnChip_1
+{
+    background-image: url("../Assets/Overall UI/Chip1.png");
+}
+
+#btnChip_5
+{
+    background-image: url("../Assets/Overall UI/Chip5.png");
+}
+
+#btnChip_10
+{
+    background-image: url("../Assets/Overall UI/Chip10.png");
+}
+
+#btnChip_20
+{
+    background-image: url("../Assets/Overall UI/Chip20.png");
+}
+
+#btnChip_50
+{
+    background-image: url("../Assets/Overall UI/Chip50.png");
+}
+
+#btnChip_100
+{
+    background-image: url("../Assets/Overall UI/Chip100.png");
+}
+
+#btnChip_1000
+{
+    background-image: url("../Assets/Overall UI/Chip1000.png");
+}
+
+#btnChip_5000
+{
+    background-image: url("../Assets/Overall UI/Chip5000.png");
+}
+
+#btnSpin
+{
+    position: absolute;
+    font-size: 275%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1.3% 2.4% 1.3% 2.4%;
+    margin-top: 0%;
+    bottom: 10px;
+    right: 50px;
+}
+
+#slotsImg
+{
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left: 20px;
+    top: 20px;
+}
+
+#rulesBtn
+{
+    position: absolute;
+    padding: 4.5% 2.5% 4.5% 2.5%;
+    left: 75px;
+    top: 50px;
+    font-size: larger;
+}
+
+.chip
+{
+    background-size: cover;
+    height: 85px;
+    width: 85px;
+    border-radius: 50px;
+    margin-left: 60px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn
+{
+    background-image: url("../Assets/Overall UI/ButtonUp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-family: 'ChunkFive Ex';
+    cursor: pointer;
+    user-select: none;
+}
+
+#slotMachineBarrel
+{
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
+.btn:hover
+{
+    background-image: url("../Assets/Overall UI/ButtonDown.png");
+}
+
+.visible
+{
+    visibility: visible;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
+
+
+#moneyAmt
+{
+    position: absolute;
+    font-family: 'ChunkFive Ex';
+    color: white;
+    font-size: 200%;
+    right: 50px;
+    bottom: 100px;
+}
+
+#moneyAmtlbl
+{
+    position: absolute;
+    font-family: 'ChunkFive Ex';
+    color: white;
+    font-size: 200%;
+    right: 50px;
+    bottom: 150px;
+}
+
+#payoutContainer
+{
+    position: absolute;
+    width: 250px;
+    height: 625px;
+    background-color:rgb(17, 89, 17);
+    border-radius: 10px;
+    top: 180px;
+    left: 20px;
+    border: 2px solid rgb(28, 151, 28);
+}
+
+#barContainer
+{
+    position: absolute;
+    top: 65px;
+}
+
+#bellContainer
+{
+    position: absolute;
+    top: 130px;
+}
+
+#cherryContainer
+{
+    position: absolute;
+    top: 200px;
+}
+
+#plumContainer
+{
+    position: absolute;
+    top: 270px;
+}
+
+#melonContainer
+{
+    position: absolute;
+    top: 330px;
+}
+
+#bananaContainer
+{
+    position: absolute;
+    top: 400px;
+}
+
+#orangeContainer
+{
+    position: absolute;
+    top: 470px;
+}
+
+#lemonContainer
+{
+    position: absolute;
+    top: 530px;
+}
+
+.payoutImg
+{
+    width: 80px;
+    height: 100px;
+}
+
+.payoutText
+{
+    position: absolute;
+    font-family: "ChunkFive Ex";
+    color: white;
+    font-size: 300%;
+    width: 170px;
+    top: 28px;
+}
+
+#betLbl
+{
+    position: absolute;
+    color: white;
+    font-size: 375%;
+    left: 25%;
+    top: 100px;
+    font-weight: 800;
+}
+
+.barrelSlotImg
+{
+    position: absolute;
+    width: 10%;
+    height: 18%;
+    top: 375px;
+}
+
+#slotBarrelSpot1
+{
+    left: 530px;
+}
+
+#slotBarrelSpot2
+{
+    left: 745px;
+}
+
+#slotBarrelSpot3
+{
+    left: 960px;
+}
+
+.selectionImg
+{
+    position: absolute;
+    width: 25px;
+    height: 37px;
+    background-repeat: no-repeat;
+    top: 785px;
+}
+
+#selectionForChip_1
+{
+    left: 290px;
+}
+
+#selectionForChip_5
+{
+    left: 440px;
+}
+
+#selectionForChip_10
+{
+    left: 590px;
+}
+
+#selectionForChip_20
+{
+    left: 737px;
+}
+
+#selectionForChip_50
+{
+    left: 887px;
+}
+
+#selectionForChip_100
+{
+    left: 1034px;
+}
+
+#selectionForChip_1000
+{
+    left: 1185px;
+}
+
+#selectionForChip_5000
+{
+    left: 1336px;
+}
+
+.chipLbl
+{
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    user-select: none;
+}
+
+#betChipLabelChip1
+{
+    left: 600px;
+    top: 50px;
+}
+
+#betChipLabelChip5
+{
+    left: 600px;
+    top: 150px;
+}
+
+#betChipLabelChip10
+{
+    left: 750px;
+    top: 50px;
+}
+
+#betChipLabelChip20
+{
+    left: 750px;
+    top: 150px;
+}
+
+#betChipLabelChip50
+{
+    left: 900px;
+    top: 50px;
+}
+
+#betChipLabelChip100
+{
+    left: 900px;
+    top: 150px;
+}
+
+#betChipLabelChip1000
+{
+    left: 1050px;
+    top: 50px;
+}
+
+#betChipLabelChip5000
+{
+    left: 1050px;
+    top: 150px;
+}
+
+.chipCounter
+{
+    position: absolute;
+    font-family: "ChunkFive Ex";
+    color: white;
+    font-size: 200%;
+}
+
+#chipCounterChip1
+{
+    left: 680px;
+    top: 60px;
+}
+
+#chipCounterChip5
+{
+    left: 680px;
+    top: 160px;
+}
+
+#chipCounterChip10
+{
+    left: 830px;
+    top: 60px;
+}
+
+#chipCounterChip20
+{
+    left: 830px;
+    top: 160px;
+}
+
+#chipCounterChip50
+{
+    left: 980px;
+    top: 60px;
+}
+
+#chipCounterChip100
+{
+    left: 980px;
+    top: 160px;
+}
+
+#chipCounterChip1000
+{
+    left: 1130px;
+    top: 60px;
+}
+
+#chipCounterChip5000
+{
+    left: 1130px;
+    top: 160px;
+}
+
+#addBet
+{
+    position: absolute;
+    font-size: 200%;
+    width: 110px;
+    left: 650px;
+    bottom: 165px;
+    text-align: center;
+    padding: 1%;
+}
+
+#removeBet
+{
+    position: absolute;
+    font-size: 200%;
+    left: 875px;
+    bottom: 165px;
+    text-align: center;
+    opacity: .6;
+    padding: 1%;
+}
+
+#rulesScreen
+{
+    font-family: "ChunkFive Ex";
+    color: white;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 175%;
+    visibility: hidden;
+}
+
+table
+{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+table, td, th
+{
+    border: 1px solid white;
+}
+
+#closeRulesBtn
+{
+    color: black;
+    font-size: 120%;
+    margin-top: 20%;
+}
+
+@font-face {
+    font-family: "ChunkFive Ex";
+    src: url("../Assets/Chunkfive Ex.ttf");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="slots.css">
+        <link rel="stylesheet" href="./css/slots.css">
+        <script src="./js/slots.js" defer></script>
     </head>
     <body>
+
         <img id="slotsImg" src="./Assets/Overall UI/Slot Machine Icon.png">
         <img id="slotMachineBarrel" src="./Assets/Slots/Slot Machine Barrel.png">
         <div id="betLbl">BET:</div>
@@ -11,6 +13,40 @@
         <div id="moneyAmtlbl">CHIPS:</div>
         <div id="moneyAmt">$10,000</div>
         <span id="btnBack" class="btn">Back</span>
+
+        <img id="betChipLabelChip1" src="./Assets/Overall UI/Chip1.png" class="chipLbl">
+        <img id="betChipLabelChip5" src="./Assets/Overall UI/Chip5.png" class="chipLbl">
+        <img id="betChipLabelChip10" src="./Assets/Overall UI/Chip10.png" class="chipLbl">
+        <img id="betChipLabelChip20" src="./Assets/Overall UI/Chip20.png" class="chipLbl">
+        <img id="betChipLabelChip50" src="./Assets/Overall UI/Chip50.png" class="chipLbl">
+        <img id="betChipLabelChip100" src="./Assets/Overall UI/Chip100.png" class="chipLbl">
+        <img id="betChipLabelChip1000" src="./Assets/Overall UI/Chip1000.png" class="chipLbl">
+        <img id="betChipLabelChip5000" src="./Assets/Overall UI/Chip5000.png" class="chipLbl">
+
+        <div id="chipCounterChip1" class="chipCounter">0</div>
+        <div id="chipCounterChip5" class="chipCounter">0</div>
+        <div id="chipCounterChip10" class="chipCounter">0</div>
+        <div id="chipCounterChip20" class="chipCounter">0</div>
+        <div id="chipCounterChip50" class="chipCounter">0</div>
+        <div id="chipCounterChip100" class="chipCounter">0</div>
+        <div id="chipCounterChip1000" class="chipCounter">0</div>
+        <div id="chipCounterChip5000" class="chipCounter">0</div>
+
+        <div id="addBet" class="btn">Add</div>
+        <div id="removeBet" class="btn">Remove</div>
+
+        <img id="selectionForChip_1" class="selectionImg visible" src="./Assets/Overall UI/ArrowDown.png"/>
+        <img id="selectionForChip_5" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+        <img id="selectionForChip_10" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+        <img id="selectionForChip_20" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+        <img id="selectionForChip_50" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+        <img id="selectionForChip_100" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+        <img id="selectionForChip_1000" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+        <img id="selectionForChip_5000" class="selectionImg invisible" src="./Assets/Overall UI/ArrowDown.png">
+
+        <img id="slotBarrelSpot1" class="barrelSlotImg" src="./Assets/Slots/Wheel - Seven.png">
+        <img id="slotBarrelSpot2" class="barrelSlotImg" src="./Assets/Slots/Wheel - Seven.png">
+        <img id="slotBarrelSpot3" class="barrelSlotImg" src="./Assets/Slots/Wheel - Melon.png">
 
         <div id="payoutContainer">
             <div>
@@ -58,9 +94,52 @@
             <button id="btnChip_20" type="submit" class="chip "></button>
             <button id="btnChip_50" type="submit" class="chip "></button>
             <button id="btnChip_100" type="submit" class="chip "></button>
-            <button id="btnChip_1k" type="submit" class="chip "></button>
-            <button id="btnChip_5k" type="submit" class="chip "></button>
+            <button id="btnChip_1000" type="submit" class="chip "></button>
+            <button id="btnChip_5000" type="submit" class="chip "></button>
         </span> 
         <span id="btnSpin" class="btn">Spin</span>
+
+        <div id="rulesScreen">
+            <h2>Rules for Slots</h2>
+            <p>
+                To select a bet just click on the chip you would like to add to the pot on the bottom of the screen. (Default is 1)
+                <br>
+                <br>
+                When a chip is selected you will given to add or remove that chip value if possible.
+                <br>
+                <br>
+                To win you must get three of the sam symbol in a row
+                <br>
+                <br>
+                <h3 style="text-align: center;">Payouts:</h3>
+            </p>
+            <table>
+                <tr>
+                    <th>Symbol</th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Seven.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Bars.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Bell.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Cherry.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Plum.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Melon.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Banana.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Orange.png"></th>
+                    <th><img class="payoutImg" src="./Assets/Slots/Wheel - Lemon.png"></th>
+                </tr>
+                <tr>
+                    <td>Payout</td>
+                    <td>500:1</td>
+                    <td>100:1</td>
+                    <td>50:1</td>
+                    <td>20:1</td>
+                    <td>10:1</td>
+                    <td>5:1</td>
+                    <td>3:1</td>
+                    <td>2:1</td>
+                    <td>1:1</td>
+                </tr>
+            </table>
+            <div id="closeRulesBtn" class="btn">Close</div>
+        </div>
     </body>
 </html>
