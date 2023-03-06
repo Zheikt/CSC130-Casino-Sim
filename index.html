@@ -22,6 +22,19 @@
         {
             window.open("", "_self");
         }   
+
+        window.onload()
+        {
+            if(localStorage.getItem("chipsBalance") = null)
+            {
+                localStorage.setItem("chipsBalance", 5000);
+            }
+
+            if(localStorage.getItem("bankBalance"))
+            {
+                localStorage.setItem("bankBalance", 5000);
+            }
+        }
     </script>
 </body>
 </html>

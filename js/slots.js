@@ -322,7 +322,7 @@ const checkIfOutOfChips = () =>
 {
     if(parseInt(moneyAmt.innerText.replace('$',"").replaceAll(',',"")) <= 0)
     {
-        window.localStorage.setItem("chipsBalance ",moneyAmt);
+        window.localStorage.setItem("chipsBalance ", parseInt(moneyAmt.replace("$", "").replaceAll(",", "")));
         alert("You are out of chips!\nYou must go get more from the back to play.");
         window.location.href = "./bank.html";
     }
