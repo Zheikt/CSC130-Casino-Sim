@@ -263,7 +263,6 @@ const getBetAmt = () =>
 
 const checkForPayout = (num1, num2, num3) =>
 {
-    console.log(getBetAmt());
     if(num1 === 0 && num2 === 0 && num3 === 0)
     {
         return getBetAmt();
@@ -323,8 +322,7 @@ const checkIfOutOfChips = () =>
 {
     if(parseInt(moneyAmt.innerText.replace('$',"").replaceAll(',',"")) <= 0)
     {
-        // window.localStorage.setItem("",moneyAmt);
-        // window.localStorage.setItem("",bankAmt);
+        window.localStorage.setItem("chipsBalance ",moneyAmt);
         alert("You are out of chips!\nYou must go get more from the back to play.");
         window.location.href = "./bank.html";
     }
@@ -333,7 +331,6 @@ const checkIfOutOfChips = () =>
 const checkChipRemoveAvailability = (chipValue) =>
 {
     let betAmt = getBetAmt();
-    console.log(betAmt >= chipValue);
     if(betAmt >= chipValue)
     {
         setBtnAvailability(removeBtn,true,removeChips)
@@ -619,8 +616,7 @@ closeRulesBtn.addEventListener("click", () => {rulesScreen.style.visibility = "h
 
 window.onload = () =>
 {
-    // moneyAmt.innerText = formatMoneyAmt(parseInt(window.localStorage.getItem("")));
-    // bankAmt = window.localStorage.getItem("");
+    moneyAmt.innerText = formatMoneyAmt(parseInt(window.localStorage.getItem("chipsBalance ")));
     checkSpinAvailability();
     checkChipAddAvailability(1);
     checkChipRemoveAvailability(1);
