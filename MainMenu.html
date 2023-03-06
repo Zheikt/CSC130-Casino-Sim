@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="MainMenu.css">
-        <title>Main Menu</title>
+        <title style=>Main Menu</title>
     </head>
     <body>
         <div class="TitleContainer">
@@ -32,18 +32,22 @@
                 window.location.assign('./bank.html');
             }
         </script>
+                <img id="blackjackComingSoon" class="comingSoonImg" src="./Assets/Overall UI/ComingSoonStamp.png">
+                <img id="pokerComingSoon" class="comingSoonImg" src="./Assets/Overall UI/ComingSoonStamp.png">
     </body>
     <script>
+        let moneyAmt = document.getElementById("GolbalChips");
+
         function NavigateToRoulette() {
             window.location = "./RoulettePage.html";
         }
 
         function NavigateToBlackJack() {
-            window.location = "./Blackjack.html";
+            // window.location = "./Blackjack.html";
         }
 
         function NavigateToFiveCardPoker() {
-            window.location = "./5CardDraw.html";
+            // window.location = "./5CardDraw.html";
         }
 
         function NavigateToCraps() {
@@ -60,6 +64,34 @@
 
         function OpenBank() {
             window.location = "./Bank.html";
+        }
+
+        const formatMoneyAmt = (totalMoney) =>
+        {
+            totalMoney = "" + totalMoney;
+            let reversedMoneyStr = "";
+            let counter = 0;
+            for(let i = totalMoney.length; i >= 0; i--)
+            {
+                reversedMoneyStr += totalMoney.substring(i,i+1);
+                if((counter % 3) === 0 && counter != 0 && counter != totalMoney.length)
+                {
+                    reversedMoneyStr += ",";
+                }
+                counter++;
+            }
+            let moneyStr = "$";
+            for(let i = reversedMoneyStr.length; i >= 0; i--)
+            {
+                moneyStr += reversedMoneyStr.substring(i,i+1);
+            }
+
+            return moneyStr;
+        }
+
+        window.onload = () =>
+        {
+            moneyAmt.innerText = "Chips:\n" + formatMoneyAmt(window.localStorage.getItem("chipsBalance"));
         }
     </script>
 </html>
