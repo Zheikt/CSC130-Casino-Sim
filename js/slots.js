@@ -372,6 +372,15 @@ const spinWheel = () =>
     {
         clearInterval(intervalId);
         let payout = checkForPayout(rNum1,rNum2,rNum3);
+        if(payout != 0)
+        {
+            alert("You Won: " + formatMoneyAmt(payout))
+        }
+        else
+        {
+            alert("You Lost: " + formatMoneyAmt(getBetAmt()))
+        }
+
         moneyAmt.innerText = formatMoneyAmt(parseInt(moneyAmt.innerText.replace("$","").replaceAll(",","")) + payout);
         checkSpinAvailability();
         clearBets();

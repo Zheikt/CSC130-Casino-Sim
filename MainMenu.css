@@ -72,9 +72,9 @@ html {
 }
 
 .ChipContainer {
+    margin-top: 12%;
     position: sticky;
     display: flex;
-    margin-bottom: 2%;
 }
 
 #GolbalChips {
@@ -84,9 +84,6 @@ html {
     font-size: 2rem;
 }
 
-.ButtonContainer {
-    margin-top: 10%;
-}
 
 .Button {
     background-image: url("./Assets/Overall UI/ButtonUp.png");
