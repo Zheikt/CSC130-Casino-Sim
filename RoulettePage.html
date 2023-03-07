@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="Roulette.css">
         <title>Roulette Page</title>
     </head>
-    <body>
+    <body onload="SetChips()">
         <div class="iconTopLeft">
             <img id="imgRouletteIcon" class="rouletteIcon" src="./Assets/Overall UI/Roulette Icon.png"></img>
             <button id="btnRouletteRules" class="rulesButton">Rules</button>
@@ -72,17 +72,18 @@
             </div>
         </div>
         <div class="chipContainer">
-            <p id="pGolbalChips" class="chips" style="grid-column: 10/11; grid-row: 1/2;">Chips:<br /> $4,000</p>
-            <span id="btnExit" class="btn" onclick="Exit()" style="grid-column: 1/2; grid-row: 2/3;">Exit</span>
-            <button id="btnOneToken" class="token" onclick="SelectToken(this.id); console.log(this.id)" style="grid-column: 2/3; grid-row: 2/3;"></button>
-            <button id="btnFiveToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 3/4; grid-row: 2/3;"></button>
-            <button id="btnTenToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 4/5; grid-row: 2/3;"></button>
-            <button id="btnTwentyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 5/6; grid-row: 2/3;"></button>
-            <button id="btnFiftyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 6/7; grid-row: 2/3;"></button>
-            <button id="btnOneHundredToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 7/8; grid-row: 2/3;"></button>
-            <button id="btnOneThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 8/9; grid-row: 2/3;"></button>
-            <button id="btnFiveThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 9/10; grid-row:2/3;"></button>
-            <span id="btnSpin" class="btn" onclick="Spin()" style="grid-column: 10/11; grid-row: 2/3;">Spin</span>
+            <p id="pGolbalChips" class="chips" style="grid-column: 10/11; grid-row: 1/2;">Chips:</p>
+            <p id="pGolbalChipsNum" class="chips" style="grid-column: 10/11; grid-row: 2/3;"></p>
+            <span id="btnExit" class="btn" onclick="Exit()" style="grid-column: 1/2; grid-row: 3/4;">Exit</span>
+            <button id="btnOneToken" class="token" onclick="SelectToken(this.id); console.log(this.id)" style="grid-column: 2/3; grid-row: 3/4;"></button>
+            <button id="btnFiveToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 3/4; grid-row: 3/4;"></button>
+            <button id="btnTenToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 4/5; grid-row: 3/4;"></button>
+            <button id="btnTwentyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 5/6; grid-row: 3/4;"></button>
+            <button id="btnFiftyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 6/7; grid-row: 3/4;"></button>
+            <button id="btnOneHundredToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 7/8; grid-row: 3/4;"></button>
+            <button id="btnOneThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 8/9; grid-row: 3/4;"></button>
+            <button id="btnFiveThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 9/10; grid-row:3/4;"></button>
+            <span id="btnSpin" class="btn" onclick="Spin()" style="grid-column: 10/11; grid-row: 3/4;">Spin</span>
             <div id="divArrowOneToken" style="grid-column: 2/3; grid-row: 1/2;">
                 <img id="imgArrowOne" class="arrows" src="./Assets/Overall UI/ArrowDown.png"/>
             </div>

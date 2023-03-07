@@ -96,16 +96,21 @@ html {
 .chipContainer {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .5fr .5fr 1fr;
     align-items: center;
     margin-bottom: 1%;
 }
 
 #pGolbalChips {
     position: sticky;
-    left: 88.5%;
     color: white;
     font-size: 2rem;
+}
+
+#pGolbalChipsNum {
+    position: sticky;
+    color: white;
+    font-size: 16pt;
 }
 
 .chips{

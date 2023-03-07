@@ -8,9 +8,25 @@ var arrowSeven = document.getElementById("imgArrowOneThousand");
 var arrowEight = document.getElementById("imgArrowFiveThousand");
 var resultArea = document.getElementById("divSpinResult");
 var result = document.getElementById("lblResult");
+var numOfChips = document.getElementById("pGolbalChipsNum");
 
-var currentTokenValue = 0;
-var totalPayout = 0;
+let currentTokenValue = 0;
+let totalPayout = 0;
+let totalBetAmount = 0;
+let totalChips = localStorage.getItem('chipsBalance');
+
+function SetChips() {
+    if (totalChips == 0){
+        alert("You have no chips. Redirecting to Bank.");
+        window.location = "./Bank.html";
+    }
+    else if (totalChips = "NaN") {
+        numOfChips.innerHTML = 4000;
+    }
+    else {
+        numOfChips.innerText = totalChips;
+    }
+}
 
 function getAnswerInt(min, max) {
     min = Math.ceil(min);
@@ -18,73 +34,59 @@ function getAnswerInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function CalculateWin(roll, bidAmount) {
-    if (roll <= 36) {
-        // Payout for inviual number
-        totalPayout += bidAmount * 36;
-        console.log("single Number Pay-Out: " + totalPayout);
+function finalCompression(roll, bidAmount, btnidNum, color) {
+    if (btnidNum < 36) {
+        CheckForSingleWin(roll, bidAmount);
     }
-    if (roll >= 1 && roll <= 12) {
-        // Payout for 1st 12
+    if (btnidNum == 45 && color == "red") {
         totalPayout += bidAmount * 2;
-        console.log("1st 12 Pay-Out: " + totalPayout);
+        console.log("Red Pay-Out: " + totalPayout);
     }
-    if (roll >= 13 && roll <= 24) {
-        // Payout for 2nd 12
+    if (btnidNum == 46 && color == "black") {
         totalPayout += bidAmount * 2;
-        console.log("2nd 12 Pay-Out: " + totalPayout);
+        console.log("Black Pay-Out: " + totalPayout);
     }
-    if (roll >= 25 && roll <= 36) {
-        // Payout for 3rd 12
-        totalPayout += bidAmount * 2;
-        console.log("3rd 12 Pay-Out: " + totalPayout);
+    if (btnidNum == 44) {
+        CheckForEvenWin(roll, bidAmount);
     }
-    if (roll == 1 || roll == 4 || roll == 7 || roll == 10 || roll == 13 || roll == 16 || roll == 19 || roll == 22 || roll == 25 || roll == 28 || roll == 31 || roll == 34) {
+    if (btnidNum == 47) {
+        CheckForOddWin(roll, bidAmount);
+    }
+    if (btnidNum == 42 && (roll == 1 || roll == 4 || roll == 7 || roll == 10 || roll == 13 || roll == 16 || roll == 19 || roll == 22 || roll == 25 || roll == 28 || roll == 31 || roll == 34)) {
         // Payout for Row 1
         totalPayout += bidAmount * 2;
         console.log("Row One Pay-Out: " + totalPayout);
     }
-    if (roll == 2 || roll == 5 || roll == 8 || roll == 11 || roll == 14 || roll == 17 || roll == 20 || roll == 23 || roll == 26 || roll == 29 || roll == 32 || roll == 35) {
+    if (btnidNum == 41 && (roll == 2 || roll == 5 || roll == 8 || roll == 11 || roll == 14 || roll == 17 || roll == 20 || roll == 23 || roll == 26 || roll == 29 || roll == 32 || roll == 35)) {
         // Payout for Row 2
         totalPayout += bidAmount * 2;
         console.log("Row Two Pay-Out: " + totalPayout);
     }
-    if (roll == 3 || roll == 6 || roll == 9 || roll == 12 || roll == 15 || roll == 18 || roll == 11 || roll == 24 || roll == 27 || roll == 30 || roll == 33 || roll == 36) {
+    if (btnidNum == 40 && (roll == 3 || roll == 6 || roll == 9 || roll == 12 || roll == 15 || roll == 18 || roll == 11 || roll == 24 || roll == 27 || roll == 30 || roll == 33 || roll == 36)) {
         // Payout for Row 3
         totalPayout += bidAmount * 2;
         console.log("Row Three Pay-Out: " + totalPayout);
     }
-    if (roll >= 1 && roll <= 18) {
-        // Payout for 1 to 18
-        totalPayout += bidAmount;
-        console.log("1 To 18 Pay-Out: " + totalPayout);
+    if (btnidNum == 37 && (roll >= 1 && roll <= 12)){
+        totalPayout += bidAmount * 2;
+        console.log("1st 12 Pay-Out: " + totalPayout);
     }
-    if (roll % 2 == 0) {
-        // Payout for Evens
-        totalPayout += bidAmount;
-        console.log("Evens Pay-Out: " + totalPayout);
+    if (btnidNum == 38 && (roll >= 13 && roll <= 24)){
+        totalPayout += bidAmount * 2;
+        console.log("1st 12 Pay-Out: " + totalPayout);
     }
-    if (resultArea.style.backgroundColor == "red") {
-        // Payout for Reds
-        totalPayout += bidAmount * 1;
-        console.log("Red Pay-Out: " + totalPayout);
+    if (btnidNum == 39 && (roll >= 25 && roll <= 36)){
+        totalPayout += bidAmount * 2;
+        console.log("1st 12 Pay-Out: " + totalPayout);
     }
-    if (resultArea.style.backgroundColor == "black") {
-        // Payout for Blacks
-        totalPayout += bidAmount * 1;
-        console.log("Black Pay-Out: " + totalPayout);
+    if (btnidNum == 43 && (roll >= 1 && roll <= 18)){
+        totalPayout += bidAmount * 2;
+        console.log("First 18 Pay-Out: " + totalPayout);
     }
-    if (roll % 2 != 0) {
-        // Payout for Odds
-        totalPayout += bidAmount;
-        console.log("Odds Pay-Out: " + totalPayout);
+    if (btnidNum == 48 && (roll >= 19 && roll <= 36)){
+        totalPayout += bidAmount * 2;
+        console.log("Last 18 Pay-Out: " + totalPayout);
     }
-    if (roll >= 19 && roll <= 36) {
-        // Payout for 19 to 36
-        totalPayout += bidAmount;
-        console.log("19 To 36 Pay-Out: " + totalPayout);
-    }
-    return totalPayout;
 }
 
 function Spin() {
@@ -93,6 +95,7 @@ function Spin() {
     var roll = getAnswerInt(0, 36);
     console.log(roll);
     result.innerHTML = roll;
+
     if (roll == 2 || roll == 4 || roll == 6 || roll == 8 || roll == 10 || roll == 11 || roll == 13 || roll == 15 || roll == 17 || roll == 20 || roll == 22 || roll == 24 || roll == 26 || roll == 28 || roll == 29 || roll == 31 || roll == 33 || roll == 35) {
         resultArea.style.backgroundColor = "black";
     }
@@ -102,43 +105,156 @@ function Spin() {
     else {
         resultArea.style.backgroundColor = "green";
     }
-    CheckForSingleWin(roll);
+    for (var i = 0; i <= 48; i++) {
+        var divbidded = document.getElementById("btn" + i.toString());
+        switch (divbidded.style.border.toString()) {
+            case "5px dotted green" :
+                finalCompression(roll, 1, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted pink" :
+                finalCompression(roll, 5, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted blue" :
+                finalCompression(roll, 10, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted darkred" :
+                finalCompression(roll, 20, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted lightblue" :
+                finalCompression(roll, 50, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted red" :
+                finalCompression(roll, 100, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted yellow" :
+                finalCompression(roll, 1000, i, resultArea.style.backgroundColor);
+                break;
+            case "5px dotted orange" :
+                finalCompression(roll, 5000, i, resultArea.style.backgroundColor);
+                break;
+        }
+    }
+    var tempChips = parseInt(numOfChips.innerText);
+    totalChips = tempChips + totalPayout;
+    numOfChips.innerHTML = totalChips;
+    calcChips();
+    WinLoss();
 }
 
-function CheckForSingleWin(roll) {
+function calcChips() {
+    let tempChips = totalChips - totalBetAmount
+    if (tempChips <= 0) {
+        // Leave Page
+        alert("You have no chips. Redirecting to Bank.");
+        window.location = "./Bank.html";
+        return true;
+    }
+    else {
+        // Calculate Chips
+        numOfChips.innerHTML = tempChips;
+        return false;
+    }
+     
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function WinLoss() {
+    await sleep(1000);
+    let money = totalPayout - totalBetAmount
+    alert("Result: " + money + " Dollars");
+    ClearBets();
+}
+
+function ClearBets() {
+    for (let i = 0; i <= 48; i++) {
+        var div = document.getElementById("btn" + i.toString());
+        div.style.border = "";
+    }
+    totalBetAmount = 0;
+}
+
+function CheckForOddWin(roll, bidAmount) {
+    if (roll % 2 != 0) {
+        // Payout for Odds
+        totalPayout += bidAmount * 2;
+        console.log("Odd Pay-Out: " + totalPayout);
+    }
+    else {
+        console.log("No Odd Win");
+    }
+}
+
+function CheckForEvenWin(roll, bidAmount) {
+    if (roll % 2 == 0) {
+        // Payout for Evens
+        totalPayout += bidAmount * 2;
+        console.log("Evens Pay-Out: " + totalPayout);
+    }
+    else {
+        console.log("No Even Win");
+    }
+}
+
+function CheckForColorWin(color, bidAmount) {
+    switch (color) {
+        case "black":
+            
+            break;
+        case "red":
+            
+            break;
+        case "green":
+            totalPayout += bidAmount * 2;
+            console.log("Green Pay-Out: " + totalPayout);
+            break;
+    }
+}
+
+function CheckForSingleWin(roll, bidAmount) {
         var biddedDiv = document.getElementById("btn" + roll.toString());
         switch (biddedDiv.style.border.toString()) {
             case "5px dotted green" :
                 console.log("Green Bid Won!");
-                CalculateWin(roll, 1);
+                totalPayout += bidAmount * 1;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted pink" :
                 console.log("Pink Bid Won!");
-                CalculateWin(roll, 5);
+                totalPayout += bidAmount * 5;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted blue" :
                 console.log("Blue Bid Won!");
-                CalculateWin(roll, 10);
+                totalPayout += bidAmount * 10;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted darkred" :
                 console.log("Dark Red Bid Won!");
-                CalculateWin(roll, 20);
+                totalPayout += bidAmount * 20;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted lightblue" :
                 console.log("Light Blue Bid Won!");
-                CalculateWin(roll, 50);
+                totalPayout += bidAmount * 50;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted red" :
                 console.log("Red Bid Won!");
-                CalculateWin(roll, 100);
+                totalPayout += bidAmount * 100;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted yellow" :
                 console.log("Yellow Bid Won!");
-                CalculateWin(roll, 1000);
+                totalPayout += bidAmount * 1000;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
             case "5px dotted orange" :
                 console.log("Orange Bid Won!");
-                CalculateWin(roll, 5000);
+                totalPayout += bidAmount * 5000;
+                console.log("single Number Pay-Out: " + totalPayout);
                 break;
         }
 }
@@ -147,36 +263,164 @@ function Exit() {
     window.location = "./MainMenu.html";
 }
 
-function PlaceBid(clickedid) {
-    var id = clickedid + "";
-    var clickedDiv = document.getElementById(id);
-    if (arrowOne.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted green";
-    }
-    else if (arrowTwo.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted pink";
-    }
-    else if (arrowThree.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted blue";
-    }
-    else if (arrowFour.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted darkred";
-    }
-    else if (arrowFive.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted lightblue";
-    }
-    else if (arrowSix.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted red";
-    }
-    else if (arrowSeven.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted yellow";
-    }
-    else if (arrowEight.style.visibility == "visible") {
-        clickedDiv.style.border = "5px dotted orange";
+function CheckIfOver() {
+    if (totalBetAmount > parseInt(numOfChips.innerHTML)) {
+        return true;
     }
     else {
-        clickedDiv.style.border = "";
+        return false;
     }
+}
+
+function PlaceBid(clickedid) {
+    var clickedDiv = document.getElementById(clickedid.toString());
+    if (arrowOne.style.visibility == "visible") {
+        if (clickedDiv.style.border == "5px dotted green") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted green";
+            totalBetAmount += 1;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 1;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowTwo.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted pink";
+            totalBetAmount += 5;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 5;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowThree.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted blue";
+            totalBetAmount += 10;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 10;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowFour.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted darkred";
+            totalBetAmount += 20;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 20;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowFive.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted lightblue";
+            totalBetAmount += 50;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 50;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowSix.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted red";
+            totalBetAmount += 100;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 100;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowSeven.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted yellow";
+            totalBetAmount += 1000;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 1000;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else if (arrowEight.style.visibility == "visible") {
+        if (clickedDiv.style.border != "") {
+            alert("Bid Already Placed");
+        }
+        else {
+            clickedDiv.style.border = "5px dotted orange";
+            totalBetAmount += 5000;
+            if (CheckIfOver() == true) {
+                totalBetAmount -= 5000;
+                clickedDiv.style.border = "";
+                alert("Not Enough Chips");
+            }
+        }
+    }
+    else {
+        if (clickedDiv.style.border == "5px dotted green") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 1;
+        }
+        if (clickedDiv.style.border == "5px dotted pink") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 5;
+        }
+        if (clickedDiv.style.border == "5px dotted blue") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 10;
+        }
+        if (clickedDiv.style.border == "5px dotted darkred") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 20;
+        }
+        if (clickedDiv.style.border == "5px dotted lightblue") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 50;
+        }
+        if (clickedDiv.style.border == "5px dotted red") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 100;
+        }
+        if (clickedDiv.style.border == "5px dotted yellow") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 1000;
+        }
+        if (clickedDiv.style.border == "5px dotted orange") {
+            clickedDiv.style.border = "";
+            totalBetAmount -= 5000;
+        }
+    }
+    console.log(totalBetAmount);
 }
 
 function Rules() {
