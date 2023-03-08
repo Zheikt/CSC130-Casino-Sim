@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="Roulette.css">
         <title>Roulette Page</title>
     </head>
-    <body>
+    <body onload="SetChips()">
         <div class="iconTopLeft">
             <img id="imgRouletteIcon" class="rouletteIcon" src="./Assets/Overall UI/Roulette Icon.png"></img>
-            <button id="btnRouletteRules" class="rulesButton">Rules</button>
+            <button id="btnRouletteRules" class="rulesButton" onclick="Rules()">Rules</button>
         </div>
         <div>
             <div id="imgBoard" class="assetContainer">
@@ -72,17 +72,18 @@
             </div>
         </div>
         <div class="chipContainer">
-            <p id="pGolbalChips" class="chips" style="grid-column: 10/11; grid-row: 1/2;">Chips:<br /> $4,000</p>
-            <span id="btnExit" class="btn" onclick="Exit()" style="grid-column: 1/2; grid-row: 2/3;">Exit</span>
-            <button id="btnOneToken" class="token" onclick="SelectToken(this.id); console.log(this.id)" style="grid-column: 2/3; grid-row: 2/3;"></button>
-            <button id="btnFiveToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 3/4; grid-row: 2/3;"></button>
-            <button id="btnTenToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 4/5; grid-row: 2/3;"></button>
-            <button id="btnTwentyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 5/6; grid-row: 2/3;"></button>
-            <button id="btnFiftyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 6/7; grid-row: 2/3;"></button>
-            <button id="btnOneHundredToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 7/8; grid-row: 2/3;"></button>
-            <button id="btnOneThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 8/9; grid-row: 2/3;"></button>
-            <button id="btnFiveThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 9/10; grid-row:2/3;"></button>
-            <span id="btnSpin" class="btn" onclick="Spin()" style="grid-column: 10/11; grid-row: 2/3;">Spin</span>
+            <p id="pGolbalChips" class="chips" style="grid-column: 10/11; grid-row: 1/2;">Chips:</p>
+            <p id="pGolbalChipsNum" class="chips" style="grid-column: 10/11; grid-row: 2/3;"></p>
+            <span id="btnExit" class="btn" onclick="Exit()" style="grid-column: 1/2; grid-row: 3/4;">Exit</span>
+            <button id="btnOneToken" class="token" onclick="SelectToken(this.id); console.log(this.id)" style="grid-column: 2/3; grid-row: 3/4;"></button>
+            <button id="btnFiveToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 3/4; grid-row: 3/4;"></button>
+            <button id="btnTenToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 4/5; grid-row: 3/4;"></button>
+            <button id="btnTwentyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 5/6; grid-row: 3/4;"></button>
+            <button id="btnFiftyToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 6/7; grid-row: 3/4;"></button>
+            <button id="btnOneHundredToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 7/8; grid-row: 3/4;"></button>
+            <button id="btnOneThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 8/9; grid-row: 3/4;"></button>
+            <button id="btnFiveThousandToken" class="token" onclick="SelectToken(this.id)" style="grid-column: 9/10; grid-row:3/4;"></button>
+            <span id="btnSpin" class="btn" onclick="Spin()" style="grid-column: 10/11; grid-row: 3/4;">Spin</span>
             <div id="divArrowOneToken" style="grid-column: 2/3; grid-row: 1/2;">
                 <img id="imgArrowOne" class="arrows" src="./Assets/Overall UI/ArrowDown.png"/>
             </div>
@@ -107,6 +108,25 @@
             <div id="divArrowFiveThousandToken" style="grid-column: 9/10; grid-row: 1/2;">
                 <img id="imgArrowFiveThousand" class="arrows" src="./Assets/Overall UI/ArrowDown.png"/>
             </div>
+        </div>
+        <div class="rulesModal" id="mdlRules">
+            <h1>Rules of Roulette</h1>
+            <ul id="lstRules">
+                <li>Each spin of the wheel provides a multitude of options for the player.</li>
+                <li>A player may bet on single numbers, rows of numbers, or on adjacent numbers.</li>
+                <li>A player also may play colors, odd or even numbers, among others.</li>
+                <li>A bet on a single number pays 36 to 1, including the 0 and 00. Bets on red or black, odd or even pay 2 for 1, or even money.</li>
+            </ul>
+            <ul id="lstPayouts">
+                <li>Single number bet pays 36 to 1. Also called “straight up.”</li>
+                <li>Twelve numbers or dozens (first, second, third dozen) pays 2 to 1.</li>
+                <li>Column bet (12 numbers in a row) pays 2 to 1.</li>
+                <li>18 numbers (1-18) pays even money.</li>
+                <li>18 numbers (19-36) pays even money.</li>
+                <li>Red or black pays even money.</li>
+                <li>Odd or even bets pay even money.</li>
+            </ul>
+            <div id="btnCloseRules" class="btnPrimary medium">Close</div>
         </div>
     </body>
     <script src="./RoulettePage.js"></script>
