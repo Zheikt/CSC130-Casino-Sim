@@ -33,10 +33,11 @@ body{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
+    border: 2px dashed white;
 }
 
 .btnTransparent:hover{
-    border: 5px solid yellow;
+    border: 2px solid yellow;
     cursor: pointer;
 }
 
@@ -54,7 +55,7 @@ body{
     margin: 0.25em;
 }
 
-#imgCrapsIndicator{
+.imgCrapsIndicator{
     max-width: 85px;
     max-height: 85px;
 }
@@ -118,27 +119,27 @@ body{
     grid-template-rows: 0.25fr 0.67fr 1.4fr 1.2fr 1.2fr 1.3fr
 }
 
-#btnOneRollSeven{
+#btnOneRoll7{
     grid-row: 3/4;
     grid-column: 2/4;
 }
 
-#btnOneRollThree{
+#btnOneRoll3{
     grid-row: 4/5;
     grid-column: 2/3;
 }
 
-#btnOneRollEleven{
+#btnOneRoll11{
     grid-row: 4/5;
     grid-column: 3/4;
 }
 
-#btnOneRollTwo{
+#btnOneRoll2{
     grid-row: 5/6;
     grid-column: 2/3;
 }
 
-#btnOneRollTwelve{
+#btnOneRoll12{
     grid-row: 5/6;
     grid-column: 3/4;
 }

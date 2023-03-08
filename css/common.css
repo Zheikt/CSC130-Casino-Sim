@@ -73,7 +73,7 @@ input{
     display: none;
     width: 90%;
     height: 90%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     grid-row: 1/5;
     grid-column: 1/12;
