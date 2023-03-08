@@ -46,7 +46,6 @@ var moneyAmt = document.getElementById("moneyAmt");
 const bankAmt = "";
 
 var selectedChip = 1;
-var selectedNumbers = [];
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -373,6 +372,15 @@ const spinWheel = () =>
     {
         clearInterval(intervalId);
         let payout = checkForPayout(rNum1,rNum2,rNum3);
+        if(payout != 0)
+        {
+            alert("You Won: " + formatMoneyAmt(payout))
+        }
+        else
+        {
+            alert("You Lost: " + formatMoneyAmt(getBetAmt()))
+        }
+
         moneyAmt.innerText = formatMoneyAmt(parseInt(moneyAmt.innerText.replace("$","").replaceAll(",","")) + payout);
         checkSpinAvailability();
         clearBets();
@@ -616,7 +624,8 @@ closeRulesBtn.addEventListener("click", () => {rulesScreen.style.visibility = "h
 
 window.onload = () =>
 {
-    moneyAmt.innerText = formatMoneyAmt(parseInt(window.localStorage.getItem("chipsBalance ")));
+    console.log(window.localStorage.getItem("chipsBalance"));
+    moneyAmt.innerText = formatMoneyAmt(window.localStorage.getItem("chipsBalance"));
     checkSpinAvailability();
     checkChipAddAvailability(1);
     checkChipRemoveAvailability(1);

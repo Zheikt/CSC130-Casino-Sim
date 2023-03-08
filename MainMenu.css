@@ -4,6 +4,7 @@ html {
     background-image: url('./Assets/Overall UI/Generic Felt Mat.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Impact;
 }
 
 .Title {
@@ -35,6 +36,7 @@ html {
     background-image: url('./Assets/Overall UI/Roulette\ Icon.png');
     background-size: cover;
     border:none;
+    cursor: pointer;
 }
 
 #Blackjack {
@@ -42,6 +44,7 @@ html {
     height: 200px;
     background-image: url('./Assets/Overall UI/Blackjack Icon.png');
     background-size: cover;
+    opacity: 0.6;
 }
 
 #FiveCardPoker {
@@ -49,6 +52,7 @@ html {
     height: 220px;
     background-image: url('./Assets/Overall UI/Poker Icon.png');
     background-size: cover;
+    opacity: 0.6;
 }
 
 #Craps {
@@ -56,6 +60,7 @@ html {
     height: 200px;
     background-image: url('./Assets/Overall UI/Craps\ Icon.png');
     background-size: cover;
+    cursor: pointer;
 }
 
 #Slots {
@@ -63,12 +68,13 @@ html {
     height: 220px;
     background-image: url('./Assets/Overall UI/Slot\ Machine\ Icon.png');
     background-size: cover;
+    cursor: pointer;
 }
 
 .ChipContainer {
+    margin-top: 12%;
     position: sticky;
     display: flex;
-    margin-bottom: 2%;
 }
 
 #GolbalChips {
@@ -78,9 +84,6 @@ html {
     font-size: 2rem;
 }
 
-.ButtonContainer {
-    margin-top: 10%;
-}
 
 .Button {
     background-image: url("./Assets/Overall UI/ButtonUp.png");
@@ -107,6 +110,24 @@ html {
     margin-left: 20%;
     position: sticky;
     left: 86%;
+}
+
+#blackjackComingSoon
+{
+    left: 40%;
+}
+
+#pokerComingSoon
+{
+    left: 72%;
+}
+
+.comingSoonImg
+{
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    top: 225px;
 }
 
 @font-face {

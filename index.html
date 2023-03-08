@@ -23,14 +23,14 @@
             window.open("", "_self");
         }   
 
-        window.onload()
+        window.onload = () =>
         {
-            if(localStorage.getItem("chipsBalance") = null)
+            if(localStorage.getItem("chipsBalance") == null)
             {
                 localStorage.setItem("chipsBalance", 5000);
             }
 
-            if(localStorage.getItem("bankBalance"))
+            if(localStorage.getItem("bankBalance") == null)
             {
                 localStorage.setItem("bankBalance", 5000);
             }
